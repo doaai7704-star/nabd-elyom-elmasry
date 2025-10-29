@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="120" viewBox="0 0 500 120">
+  <rect width="500" height="120" rx="8" fill="#ffffff"/>
+  <g transform="translate(18,12)">
+    <!-- newspaper icon -->
+    <rect x="0" y="0" width="56" height="40" rx="3" fill="#c40000"/>
+    <rect x="6" y="6" width="28" height="8" fill="#fff"/>
+    <rect x="6" y="18" width="44" height="6" fill="#fff"/>
+    <rect x="6" y="30" width="20" height="4" fill="#fff"/>
+    <!-- Arabic text -->
+    <text x="80" y="30" font-family="Cairo, Noto Naskh Arabic, sans-serif" font-weight="800" font-size="28" fill="#0f172a">نبض اليوم المصري</text>
+    <text x="80" y="58" font-family="Cairo, Noto Naskh Arabic, sans-serif" font-size="14" fill="#6b7280">أخبار مصر والعالم</text>
+  </g>
+</svg>

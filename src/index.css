@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #c40000;
+}
+
+html, body, #root { height: 100%; }
+body { font-family: 'Cairo', sans-serif; background: #ffffff; color: #111827; }
+
+.hero-caption {
+  background: linear-gradient(180deg, rgba(196,0,0,0.9), rgba(196,0,0,0.85));
+}
+
+.breaking {
+  background: #fff2f2;
+  border-top: 3px solid var(--brand);
+}
+.breaking .dot { background: var(--brand); width:10px; height:10px; border-radius:50%; display:inline-block; margin-left:8px; }

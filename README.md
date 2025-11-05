@@ -1,19 +1,19 @@
-# نبض اليوم المصري — واجهة أمامية (نسخة تجريبية)
 
-مشروع واجهة إخبارية عربية (RTL) مبني بـ React + Vite + Tailwind.
+echo "# Elmasry News Backend
 
-## تشغيل محلياً
+Simple Node.js + Express server that connects to Google Sheet via SheetDB.
+Deployed easily on Render using render.yaml configuration.
 
-1. فك الضغط عن المجلد `nabdh-client`
-2. افتح المجلد في VS Code أو طرفية
-3. نفذ:
-   ```bash
-   npm install
-   npm run dev
-   ```
-4. افتح المتصفح عند: http://localhost:5173
+## 🚀 Run locally
+1. npm install
+2. node server.mjs
+3. Visit http://localhost:3000
 
-## ملاحظات
-- البيانات مؤقتة موجودة في `src/data/`
-- اللوجو موجود كـ `src/assets/logo.svg`
-- الألوان الرئيسية: أحمر (للعناوين والأزرار) وخلفية بيضاء
+## 🌐 API Endpoints
+- GET /get-news → Fetch all news
+- POST /add-news → Add new news item
+
+## ⚙️ Deployment
+This project uses Render with \`render.yaml\` file for automatic deployment.
+
+" > README.md

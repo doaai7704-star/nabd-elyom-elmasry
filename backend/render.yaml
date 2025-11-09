@@ -8,4 +8,4 @@
     autoDeploy: true
     envVars:
       - key: PORT
-        value: 3000
+        value: ${PORT}

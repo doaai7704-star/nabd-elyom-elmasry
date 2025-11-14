@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أخبار نبض اليوم المصري</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    header {
+      background-color: #b30000;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .news-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+    .news-card:hover {
+      transform: scale(1.02);
+    }
+    .news-title {
+      color: #b30000;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .news-date {
+      color: gray;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .news-content {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>📰 أخبار نبض اليوم المصري</header>
+  <section class="news-container" id="news"></section>
+
+  <script>
+    async function loadNews() {
+    const sheetURL = https://docs.google.com/spreadsheets/d/e/2PACX-1vR4YvcF03hlyrYVDoVJV1atAMHYSq8L-tXN32kDwmwUz8K4L2UUf0Yf4WPDW-gWvISqqDe-_mj4hLC6/pub?output=csv
+    
+      const response = await fetch(sheetURL);
+      const data = await response.text();
+      const rows = data.split("\n").slice(1); // تخطي العناوين
+      const container = document.getElementById("news");
+      container.innerHTML = "";
+
+      rows.forEach(row => {
+        const [title, content, date] = row.split(",");
+        if (title && content) {
+          const card = document.createElement("div");
+          card.className = "news-card";
+          card.innerHTML = `
+            <div class="news-title">${title}</div>
+            <div class="news-date">${date || ""}</div>
+            <div class="news-content">${content}</div>
+          `;
+          container.appendChild(card);
+        }
+      });
+    }
+    loadNews();
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿services:
+  - type: web
+    name: elmasry-news-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node server.mjs"
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: ${PORT}
